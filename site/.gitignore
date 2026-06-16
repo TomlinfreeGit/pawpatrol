@@ -1,1 +1,2 @@
-dist/
+# dist/ 不再排除 — 我们要把生成的 dist/ 一起 push 到 GitHub
+# 如果不想 push,可以恢复: dist/
