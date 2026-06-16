@@ -31,6 +31,23 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .header h1 { font-size: 28px; margin-bottom: 8px; }
+.logo-home {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  transition: all 0.2s;
+}
+.logo-home:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-2px);
+}
+.logo-home h1 {
+  margin: 0;
+}
 .header .subtitle { opacity: 0.9; font-size: 14px; }
 
 /* Search */

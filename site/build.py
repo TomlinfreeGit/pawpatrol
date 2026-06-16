@@ -206,6 +206,23 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 .header h1 { font-size: 28px; margin-bottom: 8px; }
+.logo-home {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 2px 6px;
+  margin: -2px -6px;
+  transition: all 0.2s;
+}
+.logo-home:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateX(-2px);
+}
+.logo-home h1 {
+  margin: 0;
+}
 .header .subtitle { opacity: 0.9; font-size: 14px; }
 
 /* Search */
@@ -554,7 +571,9 @@ def html_header(title, with_search=True):
 <body>
 <div class="header">
   <div class="container">
-    <h1>🐾 汪汪队立大功</h1>
+    <a href="index.html" class="logo-home" title="返回首页">
+      <h1>🐾 汪汪队立大功</h1>
+    </a>
     <div class="subtitle">PAW Patrol 13 季全集剧情索引 · 共 {len(all_records)} 集</div>
   </div>
 </div>
@@ -674,14 +693,16 @@ EPISODE_TEMPLATE_HEADER = '''<!DOCTYPE html>
 <body>
 <div class="header">
   <div class="container">
-    <h1>🐾 汪汪队立大功</h1>
+    <a href="index.html" class="logo-home" title="返回首页">
+      <h1>🐾 汪汪队立大功</h1>
+    </a>
     <div class="subtitle">第 {season} 季 · 第 {episode} 集{seg_label}</div>
   </div>
 </div>
 <div class="container">
 <div class="search-box">
   <span class="icon">🔍</span>
-  <input type="text" id="search-input" placeholder="搜索..." autocomplete="off">
+  <input type="text" id="search-input" placeholder="搜索标题、剧情、标签、英文名... (至少 2 字)" autocomplete="off">
 </div>
 <div class="search-results" id="search-results"></div>
 '''
